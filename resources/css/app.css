@@ -2,6 +2,9 @@
 @import 'tailwindcss/preflight';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
+
+
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -18,8 +21,8 @@
 
 
 
-/*@tailwind base;
-@tailwind components;*/
+/* @tailwind base;
+@tailwind components; */
 
 @tailwind utilities;
 
@@ -42,10 +45,10 @@
         @apply block text-sm font-medium leading-6 text-slate-900 first-letter:capitalize;
     }
     header {
-        @apply bg-slate-800 shadow-md;
+        @apply bg-slate-700 shadow-md py-30 text-amber-100 text-5xl font-bold text-center;
     }
     nav {
-        @apply p-5 max-w-screen-lg mx-auto flex items-center justify-between;
+        @apply px-32 py-16 w-full flex items-center justify-between;
     }
     main {
         @apply max-w-screen-lg mx-auto;
@@ -57,7 +60,7 @@
         @apply font-semibold text-blue-500 hover:text-blue-600;
     }
     .nav-link {
-        @apply text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium;
+        @apply text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-12 py-8 text-lg font-bold;
     }
     .title {
         @apply my-6 text-center text-3xl font-bold leading-9 text-slate-900;

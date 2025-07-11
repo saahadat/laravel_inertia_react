@@ -12,7 +12,7 @@
 @source '../**/*.js';
 @source '../**/*.jsx';
 
-@theme {
+theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -20,26 +20,28 @@
 /* Please note this document will be updated as time goes by. Thank you */
 
 
-
+@tailwind utilities;
 /* @tailwind base;
 @tailwind components; */
 
-@tailwind utilities;
 
-@layer base {
+
+@layer utilities {
     body {
         font-family: "Poppins", sans-serif;
+        font-size: 22px;
     }
 }
 
-@layer components {
+@layer preflight {
     input[type="text"],
     input[type="email"],
     input[type="password"],
     input[type="search"],
     input[type="tel"],
-    input[type="url"], textarea {
-        @apply block w-full rounded-md border-0 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white;
+    input[type="url"],
+    textarea {
+        @apply block w-full rounded-md border-cyan-100 p-2 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm bg-white;
     }
     label {
         @apply block text-sm font-medium leading-6 text-slate-900 first-letter:capitalize;
@@ -54,12 +56,12 @@
         @apply max-w-screen-lg mx-auto;
     }
     .primary-btn {
-        @apply flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-slate-400 disabled:cursor-wait;
+        @apply flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-slate-400 disabled:cursor-pointer;
     }
     .text-link {
         @apply font-semibold text-blue-500 hover:text-blue-600;
     }
-    .nav-link {
+    nav-link {
         @apply text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-12 py-8 text-lg font-bold;
     }
     .title {
@@ -86,7 +88,7 @@
     .avatar {
         @apply w-8 h-8 rounded-full overflow-hidden object-center object-cover;
     }
-    .round-btn {
+    round-btn {
         @apply w-8 h-8 overflow-auto rounded-full bg-slate-100 focus:outline-none focus:ring-1 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-slate-800;
     }
 }
